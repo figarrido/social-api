@@ -4,13 +4,10 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
-
-    render json: @users
   end
 
   # GET /users/1
   def show
-    render json: @user
   end
 
   # POST /users
@@ -18,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render template: 'users/show', status: :created, location: @user
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -27,7 +24,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
-      render json: @user
+      render template: 'users/show'
     else
       render json: @user.errors, status: :unprocessable_entity
     end
