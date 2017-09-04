@@ -1,24 +1,16 @@
-# README
+# Social API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+There are 2 models
+* User (name:string)
+* Message (content:string, sender_id:integer, recipient_id:integer)
 
-Things you may want to cover:
+Available Methods
+* GET /users => show users
+* POST /users # body {name} => create user
+* PUT/PATCH /users/:id # body {name} => update user
+* DELETE /users/:id => delete user
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* GET /messages => show users
+* POST /messages # body {content, sender_id, recipient_id} => create user
+* PUT/PATCH /messages/:id # body {[content, sender_id, recipient_id]} => update user
+* DELETE /messages/:id => delete user
