@@ -80,10 +80,11 @@ test:
 # You can use this database configuration with:
 #
 production:
+  <<: *default
+  database: social-api_production
   url: <%= ENV['DATABASE_URL'] %>
 #
 # production:
 #   <<: *default
-#   database: social-api_production
 #   username: <%= ENV['DB_ROLE'] %>
 #   password: <%= ENV['SOCIAL-API_DATABASE_PASSWORD'] %>
