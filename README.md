@@ -11,6 +11,6 @@ Available Methods
 * DELETE /users/:id => delete user
 
 * GET /messages => show users
-* POST /messages # body {name, sender_id, recipient_id} => create user
-* PUT/PATCH /messages/:id # body {[name, sender_id, recipient_id]} => update user
+* POST /messages # body {content, sender_id, recipient_id} => create user
+* PUT/PATCH /messages/:id # body {[content, sender_id, recipient_id]} => update user
 * DELETE /messages/:id => delete user
